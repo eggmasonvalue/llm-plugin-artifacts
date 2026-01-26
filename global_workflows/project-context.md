@@ -1,5 +1,5 @@
 ---
-description: Maintain .context/ artifacts as living documentation. Use this skill whenever code changes affect design, structure, or behavior to keep documentation in sync.
+description: Maintain .context/ artifacts as living documentation. Can also bootstrap or refresh artifacts from existing code.
 ---
 
 # /project-context

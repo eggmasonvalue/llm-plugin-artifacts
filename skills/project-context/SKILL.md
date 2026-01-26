@@ -1,53 +1,55 @@
 ---
 name: project-context
-description: >-
-  Maintain .context/ artifacts as living documentation. Use this skill whenever code changes affect design, structure, or behavior to keep documentation in sync.
+description: Maintain .context/ artifacts as living documentation. Can also bootstrap or refresh artifacts from existing code.
 ---
 
-# Project Context Skill
+# Project Context
 
-You maintain a `.context/` folder containing living documentation that stays in sync with code.
+Manage the `.context/` living documentation.
 
-## On Every Task
+**Primary Goal**: Keep `DESIGN.md`, `ARCHITECTURE.md`, `CHANGELOG.md` in sync with code *as you edit*.
 
-### Before Starting
-1. Read relevant artifacts to understand current state
-2. Check `DESIGN.md` status markers to know what exists vs. planned
+## Capabilities
 
-### After Changes
-Update artifacts based on what changed:
+### 1. Maintain (Standard Workflow)
+Use this when making code changes.
 
+**Before Starting:**
+1. Read relevant artifacts.
+2. Check `DESIGN.md` status (`[idea]`, `[implementing]`, etc.).
+
+**Status Markers:**
+- `[idea]` → Concept
+- `[designing]` → Specs exist
+- `[implementing]` → Coding
+- `[done]` → Shipped
+
+**After Changes:**
 | Change | Artifact |
 |--------|----------|
-| Feature started | `DESIGN.md` → status to `[implementing]` |
-| Feature done | `DESIGN.md` → `[done]`, add to `CHANGELOG.md` |
-| Structure changed | `ARCHITECTURE.md` |
-| New pattern | `CONVENTIONS.md` |
-| Any meaningful change | `CHANGELOG.md` |
+| Feature started | `DESIGN.md` → `[implementing]` |
+| Feature done | `DESIGN.md` → `[done]`, `CHANGELOG.md` |
+| Structure/Arch | `ARCHITECTURE.md` |
+| Patterns | `CONVENTIONS.md` |
 
-## Status Markers
+### 2. Full Refresh / Bootstrap (Progressive)
+**Trigger**: 
+1. The `.context/` folder does not exist.
+2. User explicitly asks for "full refresh", "sync context", or "regenerate docs".
 
-In `DESIGN.md`, each feature has a status:
+> [!CAUTION]
+> **User Confirmation Required**: If the `.context/` folder ALREADY exists, you **MUST** ask the user for confirmation before performing a full refresh:
+> *"You already have context artifacts. A full refresh might overwrite your manually curated design notes. Do you want to proceed with a full re-analysis?"*
 
-```
-[idea]         — Concept only, no code
-[designing]    — Being detailed, no code yet
-[implementing] — Code in progress
-[done]         — Complete and working
-```
+**Steps for Refresh:**
+1. **Analyze Code**: Scan source for modules, classes, and relationships.
+2. **Regenerate `ARCHITECTURE.md`**: Create Mermaid diagrams and abstraction lists.
+3. **Draft `OVERVIEW.md` / `README.md`**: Summarize based on dependencies and features.
+4. **Scrub `DESIGN.md`**: Verify implemented status against actual code.
+5. **Report**: Summarize what was updated.
 
-## Principles
-
-- **Concise** — Summaries, not code duplicates
-- **Incremental** — Update what changed, don't rewrite
-- **Visual** — Use mermaid diagrams for flows/relationships
-
-## Enforcement Checklist
-
-**Do not signal task completion until:**
-
-- [ ] `DESIGN.md` status matches reality?
-- [ ] `ARCHITECTURE.md` reflects structural changes?
-- [ ] `CONVENTIONS.md` captures new patterns?
-- [ ] `CHANGELOG.md` has a new entry?
-- [ ] **TaskStatus** was set to "Updating .context artifacts"?
+## Enforcement
+**Definition of Done**:
+- [ ] Code changes reflected in artifacts?
+- [ ] `CHANGELOG.md` updated?
+- [ ] TaskStatus set to "Updating .context artifacts"?
