@@ -1,5 +1,5 @@
 ---
-description: >-
+description: Pytest conventions for testable Python code. Use this skill when writing or modifying tests to ensure coverage and structure standards are met.
 ---
 
 # /testing

@@ -17,5 +17,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Restored `GEMINI.md` to repository root.
 - Created symlink for `GEMINI.md` in `C:\Users\uig55220\.gemini`.
 
+## [Unreleased]
+### Changed
+- Renamed `antigravity-skill-mirroring` to `antigravity-skill-manager`.
+- Expanded scope of `antigravity-skill-manager` to include skill modification and location management.
+- Updated global workflows to reflect the new skill name.
+
 ## [1.0.1] - 2026-01-26
 - Previous release.

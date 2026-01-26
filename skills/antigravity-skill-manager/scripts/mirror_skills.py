@@ -3,16 +3,43 @@ import re
 from pathlib import Path
 
 def parse_frontmatter(content):
-    """Simple regex-based frontmatter parser."""
+    """Simple regex-based frontmatter parser that handles multi-line descriptions."""
     match = re.search(r"^---\n(.*?)\n---", content, re.DOTALL)
     if not match:
         return {}
     frontmatter = match.group(1)
     data = {}
-    for line in frontmatter.splitlines():
+    
+    # Very basic YAML parsing for top-level keys
+    # Handle multi-line strings (>- or |) by continually reading lines until next key
+    lines = frontmatter.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
         if ":" in line:
             key, value = line.split(":", 1)
-            data[key.strip()] = value.strip()
+            key = key.strip()
+            value = value.strip()
+            
+            # Handle multi-line string indicators
+            if value in (">", ">-", "|", "|-"):
+                multiline_value = []
+                i += 1
+                while i < len(lines):
+                    next_line = lines[i]
+                    # Check if line is indented (part of value) or empty
+                    if not next_line.strip() or next_line.startswith("  "):
+                        multiline_value.append(next_line.strip())
+                        i += 1
+                    else:
+                        # Found start of next key, backtrack
+                        i -= 1
+                        break
+                data[key] = " ".join(multiline_value)
+            else:
+                data[key] = value
+        i += 1
+            
     return data
 
 def mirror_skills():

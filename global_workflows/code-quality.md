@@ -1,5 +1,5 @@
 ---
-description: >-
+description: Enforce maintainable, agent-friendly Python code. Use this skill to check and fix code style, types, and documentation before considering a file complete.
 ---
 
 # /code-quality
