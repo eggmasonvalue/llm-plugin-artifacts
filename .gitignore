@@ -1,4 +1,1 @@
-.git/
-node_modules/
-.DS_Store
-*.log
+# Add any other ignores here

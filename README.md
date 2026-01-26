@@ -1,8 +1,10 @@
-# AI Skill Workflow Setup
+# Antigravity Skills & Workflows
 
-A repository to archive and manage AI skills, workflows, and configuration.
+This repository tracks the custom skills and workflows for Antigravity.
 
-## Contents
-- `skills/`: Reusable AI skills for code quality, project context, and testing.
-- `global_workflows/`: Workflow definitions for common tasks.
-- `GEMINI.md`: Core system instructions.
+## Setup
+The files are physically located in this repository and symlinked to the Antigravity system folder:
+`c:\Users\uig55220\.gemini\antigravity\`
+
+- `global_workflows` -> `d:\Misc2\01_Software_Projects\AI_Tools\AI skill workflow setup\global_workflows`
+- `skills` -> `d:\Misc2\01_Software_Projects\AI_Tools\AI skill workflow setup\skills`
