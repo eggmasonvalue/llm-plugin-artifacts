@@ -23,5 +23,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Expanded scope of `antigravity-skill-manager` to include skill modification and location management.
 - Updated global workflows to reflect the new skill name.
 
+## [2.1.0] - 2026-01-26
+### Changed
+- Improved `mirror_skills.py` to correctly parse multi-line YAML frontmatter (fixes empty descriptions for `code-quality`).
+- Renamed `antigravity-skill-mirroring` to `antigravity-skill-manager`.
+- Expanded capability of `antigravity-skill-manager` to find and modify skills.
+
 ## [1.0.1] - 2026-01-26
 - Previous release.
