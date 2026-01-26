@@ -9,28 +9,17 @@ Manage the `.context/` living documentation.
 
 **Primary Goal**: Keep `DESIGN.md`, `ARCHITECTURE.md`, `CHANGELOG.md` in sync with code *as you edit*.
 
-## Capabilities
-
-### 1. Maintain (Standard Workflow)
-Use this when making code changes.
-
-**Before Starting:**
-1. Read relevant artifacts.
-2. Check `DESIGN.md` status (`[idea]`, `[implementing]`, etc.).
-
-**Status Markers:**
-- `[idea]` → Concept
-- `[designing]` → Specs exist
-- `[implementing]` → Coding
-- `[done]` → Shipped
+**Artifact Definition:**
+| File | Purpose | Update When |
+|------|---------|-------------|
+| [OVERVIEW.md](OVERVIEW.md) | Project scope and purpose | Dependencies, features change |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | Module structure and data flow | Structure changes |
+| [CONVENTIONS.md](CONVENTIONS.md) | Code patterns and standards | New patterns established |
+| [DESIGN.md](DESIGN.md) | Feature status tracking | Features added/completed |
+| [CHANGELOG.md](CHANGELOG.md) | Released changes | Any meaningful change |
 
 **After Changes:**
-| Change | Artifact |
-|--------|----------|
-| Feature started | `DESIGN.md` → `[implementing]` |
-| Feature done | `DESIGN.md` → `[done]`, `CHANGELOG.md` |
-| Structure/Arch | `ARCHITECTURE.md` |
-| Patterns | `CONVENTIONS.md` |
+Update the artifacts relevant to your change according to the table above.
 
 ### 2. Full Refresh / Bootstrap (Progressive)
 **Trigger**: 
@@ -44,7 +33,7 @@ Use this when making code changes.
 **Steps for Refresh:**
 1. **Analyze Code**: Scan source for modules, classes, and relationships.
 2. **Regenerate `ARCHITECTURE.md`**: Create Mermaid diagrams and abstraction lists.
-3. **Draft `OVERVIEW.md` / `README.md`**: Summarize based on dependencies and features.
+3. **Draft `OVERVIEW.md`**: Summarize based on dependencies and features.
 4. **Scrub `DESIGN.md`**: Verify implemented status against actual code.
 5. **Report**: Summarize what was updated.
 

@@ -23,7 +23,6 @@ Ask the user for:
 ├── tests/
 │   └── test_placeholder.py
 ├── .context/
-│   ├── README.md
 │   ├── OVERVIEW.md
 │   ├── DESIGN.md
 │   ├── ARCHITECTURE.md
