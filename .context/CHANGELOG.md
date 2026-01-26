@@ -29,5 +29,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Renamed `antigravity-skill-mirroring` to `antigravity-skill-manager`.
 - Expanded capability of `antigravity-skill-manager` to find and modify skills.
 
+## [2.2.0] - 2026-01-26
+### Changed
+- Merged `sync-context` into `project-context` skill.
+- Added progressive discovery rules for full context refresh in `project-context`.
+- Removed standalone `sync-context` skill.
+
 ## [1.0.1] - 2026-01-26
 - Previous release.
