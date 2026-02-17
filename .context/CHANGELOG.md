@@ -7,11 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Added `skills/pdf` and `skills/webapp-testing` as submodules pointing to `anthropics/skills`.
-- Added `anthropics/skills` as a submodule at `skills/external/anthropics-skills`.
+- Added `skills/pdf` and `skills/webapp-testing` by copying them from `anthropics/skills`.
 
 ### Changed
-- Replaced `skills/skill-creator` folder with a submodule pointing to `anthropics/skills/skills/skill-creator`.
+- Replaced `skills/skill-creator` folder with the version from `anthropics/skills`.
 
 ### Security
 - Moved personal Git identity info (email, username) to a gitignored `skills/user_identity.md` file.
