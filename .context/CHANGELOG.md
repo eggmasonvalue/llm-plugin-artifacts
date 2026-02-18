@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Added `skills/pdf` and `skills/webapp-testing` by copying them from `anthropics/skills`.
+
+### Changed
+- Replaced `skills/skill-creator` folder with the version from `anthropics/skills`.
+
 ### Security
 - Moved personal Git identity info (email, username) to a gitignored `skills/user_identity.md` file.
 - Updated `new-project`, `release`, and `standardize-legacy-project` skills to reference the identity file instead of hardcoding values.
