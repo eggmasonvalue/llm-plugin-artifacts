@@ -1,14 +1,13 @@
----
-description: Keep .context/ artifacts in sync with code
----
-# Context Artifacts Rule
+## Context artifacts Enforcement
+**Explicit Step**: You MUST set `TaskStatus` to "Updating .context artifacts" before finishing any coding task.
+**Verify**: Do not call `notify_user` until you have confirmed that all the files in .context folder stay true to the codebase.
+**CRITICAL**:
+DO NOT USE THE .CONTEXT LOCATION FOR GOOGLE ANTIGRAVITY IDE'S FIRST PARTY ARTIFACTS.
 
-**Definition of Done**: A task is ONLY complete when `.context/` artifacts reflect the code changes.
+# Browser subagent Watchdog Protocol
+## Objective
+Prevent infinite loops and resource waste in `browser_subagent` interactions. When invoking any browser subagent instance, establish a watchdog-like protocol tailored to the task in the prompt to the subagent. 
 
-## Enforcement
-1. **Always Read**: Start every session by reading `.context/OVERVIEW.md`.
-2. **Explicit Step**: You MUST set `TaskStatus` to "Updating .context artifacts" before finishing any coding task.
-3. **Verify**: Do not call `notify_user` until you have confirmed `DESIGN.md`, `ARCHITECTURE.md`, and `CHANGELOG.md` stay true to the codebase.
-
-**CRITICAL**: Code without context updates is considered BROKEN.
-**CRITICAL**: DO NOT USE THE .CONTEXT LOCATION FOR GOOGLE ANTIGRAVITY IDE'S FIRST PARTY ARTIFACTS.
+The protocol should contain the following at the minimum: 
+1. a temporary .md file the subagent should write to as a **minimal** "status update" after each step
+2. you shall poll the .md file and terminate the subagent if the status update seems to indicate that the subagent is deviating from the task at hand.
