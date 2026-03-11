@@ -1,12 +1,11 @@
 # Antigravity Skills & Workflows
 
-This repository tracks the custom skills and workflows for Antigravity.
+This repository tracks custom skills for Antigravity.
 
 ## Note:
-While progressive disclosure is great as a strategy, agent skills aren't being reliably used by LLMs, not just due to poor YAML frontmatter.
+Workflows are no longer needed since skills are finally invokable on demand in antigravity. 
 
-To ensure that these skils can be explicitly invoked without remembering their names, a skill has been added to create a workflow for each skill. Now, antigravity enables you to invoke the workflow with a slash command which inturn invokes the skill.
-
+FREEDOM.
 
 ## Setup
 The files are physically located in this repository and symlinked to the Antigravity system folder:

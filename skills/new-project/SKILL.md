@@ -30,6 +30,7 @@ Ask the user for:
 │   └── CHANGELOG.md
 ├── pyproject.toml
 ├── .gitignore
+├── AGENTS.md
 └── README.md
 ```
 
@@ -39,21 +40,7 @@ uv init --python 3.12
 uv add --dev pytest pytest-cov ruff
 ```
 
-> uv auto-downloads Python 3.12 and manages the virtual environment internally. No manual venv setup needed.
-
-### 4. Configure Git
-1. Read identity from `skills/user_identity.md`.
-2. Initialize repository and set config:
-```bash
-git init
-git config user.name "<Git Name from user_identity.md>"
-git config user.email "<Git Email from user_identity.md>"
-```
-
-3. Set remote to use the identity:
-```bash
-git remote add origin git@<SSH Alias from user_identity.md>:<Git Name from user_identity.md>/<project-name>.git
-```
+### 4. use gh cli to create the remote repo and set it up.
 
 ### 5. Scaffold .context/ Artifacts
 
@@ -64,6 +51,24 @@ Create placeholder artifacts:
 - `CONVENTIONS.md` — Link to code-quality skill standards
 - `CHANGELOG.md` — Initial entry with scaffold date
 
+Create AGENTS.md in root with the following content:
+
+```markdown
+# Context Artifacts Rule
+.context/ artifacts are living documentation for the code. Keep .context/ artifacts in sync with code at all times.
+
+**Artifact Definition:**
+| File | Purpose | Update When |
+|------|---------|-------------|
+| [.context/OVERVIEW.md](.context/OVERVIEW.md) | Project scope and purpose | Dependencies, features change |
+| [.context/ARCHITECTURE.md](.context/ARCHITECTURE.md) | Module structure and data flow. Use mermaid diagrams where sensible | Structure changes |
+| [.context/CONVENTIONS.md](.context/CONVENTIONS.md) | Code patterns and standards | New patterns established |
+| [.context/DESIGN.md](.context/DESIGN.md) | Feature status tracking | Features added/completed |
+| [.context/CHANGELOG.md](.context/CHANGELOG.md) | Released changes | Any meaningful change |
+
+**Definition of Done**: A task is complete ONLY when `.context/` artifacts reflect the code changes. Code without context updates is considered BROKEN. 
+```
+
 ### 6. Initial Commit
 ```bash
 git add .
@@ -72,5 +77,4 @@ git commit -m "Initial project scaffold"
 
 ### 7. Report
 Confirm project created, remind user to:
-- Create GitHub repo named `<project-name>`
 - Push with `git push -u origin main`
