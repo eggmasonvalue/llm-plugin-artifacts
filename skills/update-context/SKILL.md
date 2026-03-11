@@ -1,9 +1,9 @@
 ---
-name: project-context
+name: update-context
 description: Maintain .context/ artifacts as living documentation. Can also bootstrap or refresh artifacts from existing code.
 ---
 
-# Project Context
+# Update Context
 
 Manage the `.context/` living documentation.
 
