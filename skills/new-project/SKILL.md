@@ -31,6 +31,7 @@ Ask the user for:
 ├── pyproject.toml
 ├── .gitignore
 ├── AGENTS.md
+├── GEMINI.md
 └── README.md
 ```
 
@@ -67,6 +68,10 @@ Create AGENTS.md in root with the following content:
 | [.context/CHANGELOG.md](.context/CHANGELOG.md) | Released changes | Any meaningful change |
 
 **Definition of Done**: A task is complete ONLY when `.context/` artifacts reflect the code changes. Code without context updates is considered BROKEN. 
+```
+symlink AGENTS.md to GEMINI.md in the same directory
+```bash
+ln -sf AGENTS.md GEMINI.md
 ```
 
 ### 6. Initial Commit
