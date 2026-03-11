@@ -4,6 +4,9 @@
 **CRITICAL**:
 DO NOT USE THE .CONTEXT LOCATION FOR GOOGLE ANTIGRAVITY IDE'S FIRST PARTY ARTIFACTS.
 
+## **CRITICAL**: Terminal command instructions
+Use Powershell commands
+
 # Browser subagent Watchdog Protocol
 ## Objective
 Prevent infinite loops and resource waste in `browser_subagent` interactions. When invoking any browser subagent instance, establish a watchdog-like protocol tailored to the task in the prompt to the subagent. 
