@@ -14,4 +14,10 @@ The files are physically located in this repository and symlinked to the Antigra
 - `global_workflows` -> `<repository root>\global_workflows`
 - `skills` -> `<repository root>\skills`
 
-to set up terminal app on android, run `bash ../../mnt/shared/Download/setup_terminal_android.sh` after downloading the .sh from github
+### Terminal app on android - setup
+Download the [.sh](.\`setup_terminal_android.sh`)
+```bash
+sudo apt install -y dos2unix wget
+dos2unix ../../mnt/shared/Download/setup_terminal_android.sh
+bash ../../mnt/shared/Download/setup_terminal_android.sh
+```
