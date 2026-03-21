@@ -3,7 +3,7 @@ sudo apt update
 set -e
 
 # ── apt deps ──────────────────────────────────────────────────────────────────
-sudo apt install -y git curl unzip wget
+sudo apt install -y git curl unzip
 
 # ── gh cli (official repo) ────────────────────────────────────────────────────
 sudo mkdir -p -m 755 /etc/apt/keyrings
