@@ -1,8 +1,12 @@
 #!/bin/bash
+sudo apt update && sudo apt upgrade
+sudo apt install -y dos2unix wget
+dos2unix ../../mnt/shared/Download/setup_terminal_android.sh
+bash ../../mnt/shared/Download/setup_terminal_android.sh
 set -e
 
 # ── apt deps ──────────────────────────────────────────────────────────────────
-sudo apt update && sudo apt install -y git curl unzip wget
+sudo apt install -y git curl unzip wget
 
 # ── gh cli (official repo) ────────────────────────────────────────────────────
 sudo mkdir -p -m 755 /etc/apt/keyrings
