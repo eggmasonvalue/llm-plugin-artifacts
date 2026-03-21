@@ -16,8 +16,10 @@ The files are physically located in this repository and symlinked to the Antigra
 
 ### Terminal app on android - setup
 Download the [.sh](.\`setup_terminal_android.sh`)
+
+Run the following in your terminal app:
 ```bash
-sudo apt install -y dos2unix wget
+sudo apt install -y dos2unix
 dos2unix ../../mnt/shared/Download/setup_terminal_android.sh
 bash ../../mnt/shared/Download/setup_terminal_android.sh
 ```
