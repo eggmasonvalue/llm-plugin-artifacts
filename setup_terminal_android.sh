@@ -91,7 +91,7 @@ When the user needs to copy text (a command, URL, code snippet, or any text):
 - When in doubt whether something belongs in clipboard.md — it does
 EOF
 
-ln -sf ~/.codex/AGENTS.md ~/.gemini/GEMINI.md
+mkdir -p ~/.gemini && ln -sf ~/.codex/AGENTS.md ~/.gemini/GEMINI.md
 
 echo ""
 echo "✓ Done! Now run: source ~/.bashrc"
