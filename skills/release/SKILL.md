@@ -56,4 +56,4 @@ Confirm:
 - Version bumped to X.Y.Z
 - Changelog finalized
 - Tag created
-- Pushed to remote (as configured in `user_identity.md`)
+- Pushed to remote
