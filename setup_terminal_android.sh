@@ -95,4 +95,4 @@ mkdir -p ~/.gemini && ln -sf ~/.codex/AGENTS.md ~/.gemini/GEMINI.md
 
 echo ""
 echo "✓ Done! Now run: source ~/.bashrc"
-echo "Then authenticate: gh auth login && codex && gemini"
+echo "Then authenticate: gh auth login && codex login --device-auth && NO_BROWSER=True gemini auth login"
